@@ -3,58 +3,453 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rolando Violinista</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Violinista Profesional para Bodas y Eventos | Monterrey</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/2c2c2c/f0f0f0?text=La+Banda+Sonora+de+tu+Historia');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efecto Parallax */
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.65);
+        }
+        .cta-button {
+            transition: all 0.3s ease-in-out;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-3;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 max-w-3xl mx-auto;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-<body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Rolando Violinista</h1>
-            <p>Música excepcional para momentos inolvidables. Armonía y elegancia en cada nota.</p>
-            <a href="#contact" class="btn">Contáctame</a>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Hero Section -->
+    <header class="hero-bg text-white relative min-h-screen flex items-center justify-center text-center">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 p-6 md:p-12 max-w-4xl mx-auto">
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">
+                La Banda Sonora de Tu Historia
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto font-light">
+                Música de violín en vivo que convierte tu boda o evento especial en una experiencia sublime e inolvidable. Servicio exclusivo en Monterrey y alrededores.
+            </p>
+            <a href="#paquetes" class="cta-button bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-10 rounded-full text-lg inline-block shadow-lg">
+                Descubre los Paquetes
+            </a>
         </div>
     </header>
 
     <main>
-        <section id="services" class="section">
-            <h2>Servicios</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <i class="fas fa-ring"></i>
-                    <h3>Bodas</h3>
-                    <p>Crea la atmósfera perfecta para tu día especial con melodías románticas y emotivas.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-building"></i>
-                    <h3>Eventos Corporativos</h3>
-                    <p>Añade un toque de sofisticación y distinción a tus reuniones y eventos de empresa.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Cenas Privadas</h3>
-                    <p>Disfruta de una experiencia musical íntima y personalizada en la comodidad de tu hogar.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-music"></i>
-                    <h3>Conciertos y Recitales</h3>
-                    <p>Interpretaciones magistrales para amantes de la música clásica y contemporánea.</p>
+        <!-- Propuesta de Valor -->
+        <section id="propuesta" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">El Arte de Crear Momentos Inolvidables</h2>
+                <p class="section-subtitle mb-12">Más que música, ofrezco una experiencia que eleva cada instante de tu celebración.</p>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="p-6">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Atmósferas Mágicas</h3>
+                        <p class="text-gray-600">Convierto espacios en escenarios de ensueño, donde cada nota teje una atmósfera de elegancia y emoción pura.</p>
+                    </div>
+                    <div class="p-6">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Repertorio con Alma</h3>
+                        <p class="text-gray-600">Desde Bach hasta Ed Sheeran, personalizo cada pieza para que resuene con tu historia y sorprenda a tus invitados.</p>
+                    </div>
+                    <div class="p-6">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Excelencia y Paz Mental</h3>
+                        <p class="text-gray-600">Mi compromiso es total: puntualidad, presentación impecable y coordinación fluida para que tú solo te preocupes por disfrutar.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="repertoire" class="section bg-light">
-            <h2>Repertorio Destacado</h2>
-            <div class="repertoire-grid">
-                <div class="repertoire-item">
-                    <h3>Clásicos Atemporales</h3>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2FxuTqP2G53I65I2P1K1rA?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <!-- Acerca de Mí -->
+        <section id="acerca" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6 grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-2">
+                    <img src="https://placehold.co/400x500/8c7a6b/ffffff?text=Artista" alt="Retrato del violinista" class="rounded-lg shadow-2xl w-full">
                 </div>
-                <div class="repertoire-item">
-                    <h3>Melodías Modernas</h3>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4uK0M8uQdJb4uC1x5wM2hR?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <div class="md:col-span-3">
+                    <h2 class="section-title">Hola, soy [Tu Nombre]</h2>
+                    <p class="text-lg text-gray-600 mb-4">Desde que mi arco tocó las cuerdas por primera vez, supe que mi vocación era contar historias sin palabras. El violín es la extensión de mi voz, y mi pasión es usarla para dar vida a los momentos más importantes de las personas.</p>
+                    <p class="text-gray-600 mb-6">Con más de [X] años de experiencia y formación clásica en [Menciona alguna institución relevante], mi misión va más allá de tocar música. Busco crear una conexión genuina, entender la esencia de tu celebración y traducirla en una experiencia sonora que perdure en la memoria de todos los presentes.</p>
+                    <a href="#contacto" class="font-bold text-amber-600 hover:text-amber-700">Hablemos de tu evento &rarr;</a>
                 </div>
-                <div class="repertoire-item">
-                    <h3>Bandas Sonoras</h3>
-                    <iframe style="border-radius:12px" src="
+            </div>
+        </section>
+
+        <!-- NEW: Playlists Section -->
+        <section id="repertorio-digital" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Sumérgete en la Música</h2>
+                <p class="section-subtitle mb-12">Escucha una selección de mi repertorio para cada ocasión. Imagina cómo sonaría en tu evento.</p>
+                <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Playlist Bodas -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                        <h3 class="font-serif text-2xl font-bold mb-4">Repertorio para Bodas</h3>
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5xiztvBdlUf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <!-- Playlist Cenas -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                        <h3 class="font-serif text-2xl font-bold mb-4">Música para Cenas y Cócteles</h3>
+                         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                     <!-- Playlist YouTube -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover lg:col-span-2">
+                        <h3 class="font-serif text-2xl font-bold mb-4">Pop & Rock Moderno (Versiones en Violín)</h3>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PL_3e_y2G2w0-5m4p_GFpQiE55d1p-5AnC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paquetes Sugeridos -->
+        <section id="paquetes" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Paquetes Diseñados para Tu Evento</h2>
+                <p class="section-subtitle mb-12">Soluciones pensadas para los momentos clave de tu celebración. ¿Necesitas algo más? Crearemos un plan a tu medida.</p>
+                <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                     <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-amber-400 card-hover">
+                        <h3 class="font-serif text-2xl font-bold mb-2">Ceremonia Esencial</h3>
+                        <p class="text-gray-500 mb-6">La música perfecta para el "Sí, acepto".</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> 1 Hora de música en vivo</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> Preludio, procesional y recesional</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> Asesoría de repertorio</li>
+                        </ul>
+                        <a href="#contacto" class="w-full block text-center cta-button bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-full">Solicitar Información</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-2xl border-t-4 border-amber-500 transform scale-105 card-hover relative">
+                        <p class="absolute top-0 right-0 -mt-3 mr-3 bg-amber-500 text-white text-sm font-bold px-4 py-1 rounded-full">MÁS POPULAR</p>
+                        <h3 class="font-serif text-2xl font-bold mb-2">Cóctel y Recepción</h3>
+                        <p class="text-gray-500 mb-6">Crea el ambiente ideal para celebrar.</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> 2 Horas de música en vivo</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> Incluye todo del paquete Ceremonia</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> Amplio repertorio (pop, jazz, etc.)</li>
+                             <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> Equipo de sonido profesional</li>
+                        </ul>
+                         <a href="#contacto" class="w-full block text-center cta-button bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full">Solicitar Información</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-amber-400 card-hover">
+                        <h3 class="font-serif text-2xl font-bold mb-2">Experiencia Completa</h3>
+                        <p class="text-gray-500 mb-6">La banda sonora de todo tu evento.</p>
+                        <ul class="text-left space-y-3 mb-8">
+                           <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> 3+ Horas de música en vivo</li>
+                           <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> Todo de los paquetes anteriores</li>
+                           <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> Momentos especiales (vals, cena)</li>
+                           <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> 1 Arreglo de canción especial gratis</li>
+                        </ul>
+                         <a href="#contacto" class="w-full block text-center cta-button bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-full">Solicitar Información</a>
+                    </div>
+                </div>
+                 <p class="mt-12 text-gray-600">O si prefieres, obtén una <a href="#cotizador" class="font-bold text-amber-600 hover:underline">cotización personalizada al instante</a>.</p>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section id="testimonios" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Confían en Mi Arte</h2>
+                <p class="section-subtitle mb-12">Historias de éxito que me llenan de orgullo y motivación.</p>
+                <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm border-l-4 border-amber-400">
+                        <p class="text-gray-600 mb-4 italic">"No tenemos palabras para describir la emoción que sentimos al caminar hacia el altar con tu música. Fue mágico, simplemente perfecto. Todos nuestros invitados comentaron lo elegante que fue. ¡El mejor proveedor de nuestra boda!"</p>
+                        <p class="font-bold text-gray-800">María y Juan</p>
+                        <p class="text-sm text-gray-500">Boda en Club Campestre</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm border-l-4 border-amber-400">
+                        <p class="text-gray-600 mb-4 italic">"Contratamos tus servicios para nuestra cena de gala anual y fue un acierto total. Tu profesionalismo, desde el primer contacto hasta el evento, fue impecable. La música creó una atmósfera sofisticada que elevó la percepción de nuestra marca."</p>
+                        <p class="font-bold text-gray-800">Lic. Carlos Fernández</p>
+                        <p class="text-sm text-gray-500">Director de Marketing, Tech Corp</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Social Proof / Logos -->
+        <div class="py-12 bg-white">
+            <div class="container mx-auto px-6">
+                 <h3 class="text-center text-lg font-semibold text-gray-500 mb-6">He Tenido el Honor de Tocar en Lugares y Eventos de Prestigio:</h3>
+                 <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
+                    <img class="h-10 opacity-60" src="https://placehold.co/150x50/cccccc/999999?text=Venue+Logo" alt="Logo de Venue o Cliente 1">
+                    <img class="h-12 opacity-60" src="https://placehold.co/150x50/cccccc/999999?text=Marca+Logo" alt="Logo de Venue o Cliente 2">
+                    <img class="h-10 opacity-60" src="https://placehold.co/150x50/cccccc/999999?text=Hotel+Logo" alt="Logo de Venue o Cliente 3">
+                    <img class="h-8 opacity-60" src="https://placehold.co/150x50/cccccc/999999?text=Empresa+Logo" alt="Logo de Venue o Cliente 4">
+                 </div>
+            </div>
+        </div>
+
+        <!-- Cotizador Interactivo -->
+        <section id="cotizador" class="py-16 md:py-24 bg-amber-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Crea tu Plan a la Medida</h2>
+                    <p class="section-subtitle">Usa el cotizador para una estimación inicial o contáctame directamente para afinar cada detalle.</p>
+                </div>
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <div id="quoterForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="duration" class="block text-sm font-medium text-gray-700">Duración del Servicio</label>
+                            <select id="duration" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                                <option value="1">1 Hora (Ceremonia)</option>
+                                <option value="2" selected>2 Horas (Ceremonia y Cóctel)</option>
+                                <option value="3">3 Horas (Música de ambiente)</option>
+                                <option value="4">4+ Horas (Evento completo)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="distance" class="block text-sm font-medium text-gray-700">Ubicación del Evento</label>
+                            <select id="distance" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                                <option value="0">Monterrey / San Pedro</option>
+                                <option value="50">Área Metropolitana (hasta 50 km)</option>
+                                <option value="100">Fuera del Área Metrop. (hasta 100 km)</option>
+                                <option value="150">Otro (requiere cotización especial)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="eventType" class="block text-sm font-medium text-gray-700">Tipo de Evento</label>
+                            <select id="eventType" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                                <option value="1.1">Boda</option>
+                                <option value="1">Corporativo</option>
+                                <option value="0.9">Social (XV Años, etc.)</option>
+                            </select>
+                        </div>
+                        <!-- NEW: Discount Code -->
+                        <div>
+                            <label for="discountCode" class="block text-sm font-medium text-gray-700">Código de Descuento</label>
+                            <input type="text" id="discountCode" placeholder="Ej: BODA30" class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+                        <p class="text-gray-600 text-lg">Inversión Estimada:</p>
+                        <p id="estimatedCost" class="text-3xl md:text-4xl font-bold text-amber-600 my-2">$XXXX - $YYYY MXN</p>
+                        <p id="discountMessage" class="text-green-600 font-semibold h-5"></p> <!-- Discount message placeholder -->
+                        <p class="text-sm text-gray-500 mb-6">Este es un costo aproximado. ¡Contáctame para una cotización formal y detallada!</p>
+                        <a href="#contacto" class="cta-button bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-full text-md inline-block">
+                            Solicitar Cotización Formal
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                 <div class="text-center mb-12">
+                    <h2 class="section-title">Preguntas Frecuentes</h2>
+                    <p class="section-subtitle">Resolviendo tus dudas para darte total tranquilidad.</p>
+                </div>
+                <div class="space-y-6">
+                    <details class="p-4 border rounded-lg group">
+                        <summary class="flex justify-between items-center font-semibold cursor-pointer text-lg">
+                            ¿Con cuánto tiempo de anticipación debo reservar?
+                            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <p class="text-gray-600 mt-3">Recomiendo reservar con al menos 6 a 12 meses de antelación, especialmente para bodas en temporada alta, para asegurar la disponibilidad de tu fecha.</p>
+                    </details>
+                     <details class="p-4 border rounded-lg group">
+                        <summary class="flex justify-between items-center font-semibold cursor-pointer text-lg">
+                            ¿Puedes aprender una canción que no está en tu repertorio?
+                            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <p class="text-gray-600 mt-3">¡Por supuesto! Me encanta crear momentos únicos. El servicio de arreglo de canción especial está diseñado para eso. Hablemos de esa pieza que tanto significa para ti.</p>
+                    </details>
+                     <details class="p-4 border rounded-lg group">
+                        <summary class="flex justify-between items-center font-semibold cursor-pointer text-lg">
+                            ¿Qué necesitas en el lugar del evento?
+                            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <p class="text-gray-600 mt-3">Solo necesito un espacio de aproximadamente 2x2 metros, protección contra sol o lluvia directa y un acceso a una toma de corriente. Yo me encargo de todo el equipo de audio profesional.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Dossier / Lead Magnet -->
+        <section id="dossier" class="py-16 md:py-24 bg-gray-900 text-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="section-title text-white">Descarga Mi Dossier Exclusivo</h2>
+                <p class="section-subtitle text-gray-300 mb-8">Obtén más detalles sobre mi repertorio completo, opciones de ensamble y logística en un práctico PDF. ¡Perfecto para compartir con tu wedding planner o tu equipo!</p>
+                <form id="dossierForm" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" id="dossierEmail" name="email" required class="flex-grow shadow-sm py-3 px-4 placeholder-gray-500 text-gray-900 bg-white rounded-md focus:ring-amber-500 focus:border-amber-500" placeholder="Tu mejor email">
+                    <!-- Reemplaza '#' con el enlace a tu PDF -->
+                    <a href="#" id="downloadButton" class="cta-button bg-amber-500 text-white font-bold py-3 px-8 rounded-full opacity-50 cursor-not-allowed">
+                        Descargar Ahora
+                    </a>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contacto Final -->
+        <section id="contacto" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Diseñemos Juntos tu Momento Musical</h2>
+                    <p class="section-subtitle">Estoy listo para escuchar tus ideas. Completa el formulario o contáctame directamente.</p>
+                </div>
+                <div class="max-w-xl mx-auto">
+                    <form action="#" method="POST" class="space-y-6">
+                        <input type="text" name="name" required class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 text-gray-900 bg-gray-50 rounded-md focus:ring-amber-500 focus:border-amber-500" placeholder="Nombre completo">
+                        <input type="email" name="email" required class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 text-gray-900 bg-gray-50 rounded-md focus:ring-amber-500 focus:border-amber-500" placeholder="Email">
+                        <input type="tel" name="phone" required class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 text-gray-900 bg-gray-50 rounded-md focus:ring-amber-500 focus:border-amber-500" placeholder="Teléfono / WhatsApp">
+                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 text-gray-900 bg-gray-50 rounded-md focus:ring-amber-500 focus:border-amber-500" placeholder="Fecha del evento (opcional)">
+                        <textarea name="message" rows="4" required class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 text-gray-900 bg-gray-50 rounded-md focus:ring-amber-500 focus:border-amber-500" placeholder="Cuéntame sobre tu evento..."></textarea>
+                        <button type="submit" class="w-full cta-button bg-gray-800 hover:bg-gray-900 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg">
+                            Enviar y Recibir Cotización
+                        </button>
+                    </form>
+                     <p class="text-center text-sm text-gray-500 mt-4 italic">*Las fechas para 2025/2026 se están llenando rápidamente. ¡Asegura la tuya!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+        <div class="container mx-auto py-8 px-6 text-center">
+            <p class="font-serif text-xl font-bold">[Nombre del Violinista]</p>
+            <div class="flex justify-center space-x-6 my-4">
+                <a href="#" class="hover:text-amber-400 transition-colors">YouTube</a>
+                <a href="#" class="hover:text-amber-400 transition-colors">Instagram</a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; <span id="year"></span> [Nombre del Violinista]. Todos los derechos reservados.</p>
+            <p class="text-gray-500 text-xs mt-2"><a href="#" class="hover:underline">Aviso de Privacidad</a></p>
+        </div>
+    </footer>
+    
+    <!-- NEW: WhatsApp Floating Button -->
+    <a href="https://wa.me/5218110474854" target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition-transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.512 1.916 6.402l-1.105 4.059 4.242-1.105z" />
+        </svg>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- COTIZADOR INTERACTIVO ---
+            const quoterForm = document.getElementById('quoterForm');
+            if (quoterForm) {
+                const estimatedCostEl = document.getElementById('estimatedCost');
+                const discountMessageEl = document.getElementById('discountMessage');
+                
+                const calculateCost = () => {
+                    const basePricePerHour = 2800;
+                    const distanceFactor = 12; 
+                    const specialSongCost = 950;
+                    
+                    const duration = parseFloat(document.getElementById('duration').value);
+                    const distance = parseFloat(document.getElementById('distance').value);
+                    const eventTypeMultiplier = parseFloat(document.getElementById('eventType').value);
+                    const discountCodeInput = document.getElementById('discountCode').value.trim().toUpperCase();
+
+                    let minCost = duration * basePricePerHour * eventTypeMultiplier;
+                    minCost += distance * distanceFactor;
+
+                    // Lógica del descuento
+                    if (discountCodeInput === 'BODA30') {
+                        minCost *= 0.70; // Aplicar 30% de descuento
+                        discountMessageEl.textContent = '¡Descuento del 30% aplicado!';
+                    } else {
+                        discountMessageEl.textContent = '';
+                    }
+
+                    const maxCost = minCost * 1.20;
+
+                    const formatCurrency = (value) => Math.round(value).toLocaleString('es-MX', { style: 'currency', currency: 'MXN', minimumFractionDigits: 0 });
+                    
+                    if (distance >= 150) {
+                         estimatedCostEl.textContent = 'Requiere Cotización Especial';
+                         discountMessageEl.textContent = '';
+                    } else {
+                         estimatedCostEl.textContent = `${formatCurrency(minCost)} - ${formatCurrency(maxCost)}`;
+                    }
+                };
+                
+                calculateCost();
+                quoterForm.addEventListener('input', calculateCost); // 'input' es más responsivo que 'change'
+            }
+            
+            // --- DOSSIER DOWNLOAD ---
+            const dossierForm = document.getElementById('dossierForm');
+            if(dossierForm) {
+                const emailInput = document.getElementById('dossierEmail');
+                const downloadBtn = document.getElementById('downloadButton');
+                
+                const validateEmail = (email) => {
+                    return String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+                };
+
+                emailInput.addEventListener('input', () => {
+                    if (validateEmail(emailInput.value)) {
+                        downloadBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                        downloadBtn.classList.add('hover:bg-amber-600');
+                    } else {
+                        downloadBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                        downloadBtn.classList.remove('hover:bg-amber-600');
+                    }
+                });
+
+                dossierForm.addEventListener('submit', (e) => {
+                    if (!validateEmail(emailInput.value)) {
+                        e.preventDefault(); // Prevenir envío del formulario si el email no es válido
+                        alert('Por favor, introduce un email válido para descargar el dossier.');
+                    } else {
+                        // Aquí se manejaría el envío del email a tu lista y la descarga
+                        alert('¡Gracias! Tu descarga comenzará en breve.');
+                    }
+                });
+            }
+
+            // --- GENERALES ---
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
